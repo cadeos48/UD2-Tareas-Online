@@ -29,6 +29,6 @@ public class E1 {
             signo = "positivo";
         
         // Salida de datos
-        System.out.println ("El número introducido es: " + signo );
+        System.out.println ("El número introducido es:  " + signo );
     }
 }
