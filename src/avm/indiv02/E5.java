@@ -18,15 +18,13 @@ public class E5 {
     public static void main(String[] args) {
         
         //Declaración e inicialización de variables
-        int numero1,numero2,seleccion;
-                        
-        //Entrada de datos
-        System.out.println("Introduce un número");
+        int seleccion;
         Scanner teclado = new Scanner(System.in);
-        numero1 = teclado.nextInt();
-        System.out.println("Introduce otro número");
-        numero2 = teclado.nextInt();
-        System.out.println();
+        double numero1,numero2; /*Los defino como double para que se realice
+        correctamente la división
+        */
+                         
+        //Entrada de datos
         System.out.println("Introduce una opción");
         System.out.println("1. Suma");
         System.out.println("2. Resta");
@@ -34,34 +32,32 @@ public class E5 {
         System.out.println("4. División");
         System.out.println("5. Salir");
         seleccion = teclado.nextInt();
-                       
+        System.out.println("Introduce un número");
+        numero1 = teclado.nextInt();
+        System.out.println("Introduce otro número");
+        numero2 = teclado.nextInt();
+        System.out.println();
+                               
         //Procesamiento de datos
         //Como conocemos los casos (5 opciones), utilizamos una estructura
         //de control condicional switch
         
         switch (seleccion) {
             case 1:
-                int suma;
+                double suma;
                 suma = numero1 + numero2;
                 System.out.println(numero1 + " + " + numero2 + " = " +suma);
                 break;
              case 2:
-                int resta;
+                double resta;
                 resta = numero1 - numero2;
                 System.out.println(numero1 + " - " + numero2 + " = " +resta);
                 break;
              case 3:
-                int multiplicacion;
+                double multiplicacion;
                 multiplicacion = numero1 * numero2;
                 System.out.println(numero1 + " * " + numero2 + " = " +multiplicacion);
-                break;
-            
-
-
-
-            //PREGUNTAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            // La división no se raliza correctamente, a pesar de definir
-            // la variable division como double
+                break;      
              case 4:
                 double division;
                 division = numero1 / numero2;
@@ -74,4 +70,3 @@ public class E5 {
         }
     }
 }
-   
