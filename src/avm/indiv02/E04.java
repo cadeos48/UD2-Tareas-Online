@@ -12,22 +12,38 @@ import java.util.Scanner;
  *
  * @author Usuario
  */
-public class E4 {
+public class E04 {
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        /*Programa que devuelve el resultado de una operación que se selecciona
+        en función de los números introducidos por el usuario. Se utiliza una
+        estructura condicional anidada para realizar la selección de la operación
+        a realizar.
+        */
         
         //Declaración e inicialización de variables
-        int numero1;
-        int numero2;
-                
-        //Entrada de datos
-        System.out.println("Introduce un número");
+        int numero1 = 0;
+        int numero2 = 0;
+        boolean validacion = false;
         Scanner teclado = new Scanner(System.in);
-        numero1 = teclado.nextInt();
-        System.out.println("Introduce otro número");
-        numero2 = teclado.nextInt();
+                
+       //Entrada de datos
+        do {
+            try {
+                System.out.println("Introduce un número");
+                numero1 = teclado.nextInt();
+                System.out.println("Introduce otro número");
+                numero2 = teclado.nextInt();
+                validacion = true;
+            }
+            catch (Exception e) {
+                System.out.println("Dato erroneo. Vuelve a introducir los números");
+                teclado.nextLine();//borrar memoria enter+letra
+                }
+        }
+        while (validacion == false);
         
         //Procesamiento de datos
         //Utilizamos una estructura condicional if/else anidada ya que tenemos

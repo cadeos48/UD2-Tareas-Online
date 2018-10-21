@@ -11,10 +11,11 @@ import java.util.Scanner;
  *
  * @author Usuario
  */
-public class E6 {
+public class E06 {
     /* @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Programa que muestra los primeros 30 números enteros
         
         //Declaración e inicialización de variables
         int numero = 0;

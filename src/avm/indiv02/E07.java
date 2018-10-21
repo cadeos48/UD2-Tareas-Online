@@ -5,38 +5,28 @@
  */
 package avm.indiv02;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Usuario
  */
-public class E8 {
+public class E07 {
     public static void main(String[] args) {
-        /*Programa que muestra en pantalla la tabla de multiplicar de un número
-        introducido por teclado
+        /*Programa que escribe en pantalla los números pares que hay entre el
+        56 y el 97
         */
         
         //Declaración e inicialización de variables
-        int numero, multiplicacion;
-        int contador = 1;
-        Scanner teclado = new Scanner(System.in);
-                
-        //Introducción de datos
-        System.out.println("Introduce un número");
-        numero = teclado.nextInt();
-        
+        int contador;
+                        
         //Procesamiento de datos
         /* Utilizamos un Bucle tipo for para controlar las veces que tiene que
         repetirse la imprsión del número en pantalla y anidamos un bucle
         condicional tipo if para que evalúe si el número es par o no
         */        
-        do {
-            multiplicacion = contador * numero;
-            System.out.println(numero + " X " +contador +" = " +multiplicacion);
-            contador++;
+        for (contador = 56; contador <= 97; contador++) {                    
+            if(contador%2 == 0) {
+                System.out.print(contador + ", ");
+            }
         }
-        while (contador <=10);
     }
 }
-            

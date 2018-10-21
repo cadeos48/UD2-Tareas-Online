@@ -11,22 +11,23 @@ import java.util.Scanner;
  *
  * @author Usuario
  */
-public class E10 {
-      public static void main(String[] args) {
+public class E08 {
+    public static void main(String[] args) {
         /*Programa que muestra en pantalla la tabla de multiplicar de un número
         introducido por teclado
         */
         
         //Declaración e inicialización de variables
-        int numero = 0, contador;
+        int numero = 0, multiplicacion;
+        int contador;
         boolean validacion = false;
         Scanner teclado = new Scanner(System.in);
                 
-            //Entrada de datos
-         do {
+        //Entrada de datos
+        do {
             try {
                 System.out.println("Introduce un número");
-                numero = teclado.nextInt();                
+                numero = teclado.nextInt();
                 validacion = true;
             }
             catch (Exception e) {
@@ -37,22 +38,12 @@ public class E10 {
         while (validacion == false);
         
         //Procesamiento de datos
-        /* Utilizamos un condicional if para valorar si el número introducido por
-        el usuario es mayor a 1. Anidamos un bucle for para controlar las 
-        veces que debe escribirse en pantalla el divisor, que se mostrará en caso
-        de que la división del número entre el contador de como resto cero
+        /* Utilizamos un Bucle tipo for ya que conocemos las veces que se va
+        a repetir el bucle: de 1 hasta 10.
         */        
-       if (numero > 0) {
-           for (contador = numero; contador > 0; contador--) {
-               if (numero % contador == 0) {
-                   System.out.print(contador + ", ");
-               }
-           }
-       }
-       else {
-           if (numero < 1) {
-           System.out.println("el número introducido no es válido");
-           }
-       }
-      }
- }
+        for (contador = 1; contador <=10; contador++) {
+            multiplicacion = contador * numero;
+            System.out.println(numero + " X " +contador +" = " +multiplicacion);
+        }
+    }
+}
